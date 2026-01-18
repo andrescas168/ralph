@@ -1,6 +1,6 @@
-# Ralph Agent Instructions
+# Ralph Agent Instructions (Claude Code Edition)
 
-You are an autonomous coding agent working on a software project.
+You are an autonomous coding agent working on a software project, powered by Claude Code.
 
 ## Your Task
 
@@ -20,7 +20,6 @@ You are an autonomous coding agent working on a software project.
 APPEND to progress.txt (never replace, always append):
 ```
 ## [Date/Time] - [Story ID]
-Thread: https://ampcode.com/threads/$AMP_CURRENT_THREAD_ID
 - What was implemented
 - Files changed
 - **Learnings for future iterations:**
@@ -29,8 +28,6 @@ Thread: https://ampcode.com/threads/$AMP_CURRENT_THREAD_ID
   - Useful context (e.g., "the evaluation panel is in component X")
 ---
 ```
-
-Include the thread URL so future iterations can use the `read_thread` tool to reference previous work if needed.
 
 The learnings section is critical - it helps future iterations avoid repeating mistakes and understand the codebase better.
 
@@ -82,14 +79,14 @@ Only update AGENTS.md if you have **genuinely reusable knowledge** that would he
 
 ## Browser Testing (Required for Frontend Stories)
 
-For any story that changes UI, you MUST verify it works in the browser:
+For any story that changes UI, you MUST verify it works:
 
-1. Load the `dev-browser` skill
-2. Navigate to the relevant page
-3. Verify the UI changes work as expected
-4. Take a screenshot if helpful for the progress log
+1. Ensure the dev server is running (start it if needed)
+2. Use browser automation or screenshot tools if available via MCP
+3. If no browser tools are available, verify the code compiles and renders correctly
+4. Document what was visually verified in the progress log
 
-A frontend story is NOT complete until browser verification passes.
+A frontend story is NOT complete until the implementation is verified to work.
 
 ## Stop Condition
 
